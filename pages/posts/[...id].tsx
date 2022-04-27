@@ -28,10 +28,9 @@ interface Props {
   }
   id: string
 }
-
-const MDXComponents = {
+const mdxComponents = {
   Image,
-  a: CustomLink,
+  CustomLink,
 }
 
 export const getStaticProps: GetStaticProps<MDXRemoteSerializeResult, ContextParams> = async ({ params }) => {
@@ -71,7 +70,7 @@ const Posts = ({ post, prev, next }: Props) => {
   const { frontMatter, mdxSource } = post
   return (
     <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
-      <MDXRemote {...mdxSource} components={MDXComponents} />
+      <MDXRemote {...mdxSource} components={mdxComponents} />
     </PostLayout>
   )
 }

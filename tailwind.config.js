@@ -140,7 +140,7 @@ module.exports = {
       colors: {
         blue: colors.sky,
         pink: colors.fuchsia,
-        gray: colors.coolGray,
+        gray: colors.gray,
         red: colors.rose,
         code: {
           green: '#b5f4a5',
